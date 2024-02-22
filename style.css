@@ -20,9 +20,9 @@ body, html {
     position: absolute;
     width: 20rem;
     height: 25rem;
-    background-color: #ff7811;
+    background-color:rgba(255, 137, 83, 1);
     border-radius: 0 0 10rem 10rem;
-    opacity: 0.5;
+    opacity: 0.8;
     transform: rotate(-45deg);
     left: -15%;
     top: -35%;
@@ -61,7 +61,7 @@ body, html {
 
 .navmenu ul li.active {
     background-color: rgba(255, 137, 83, 1);
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px;
 }
 
@@ -148,26 +148,47 @@ body{
 
 
 .context {
-    width: 100%;
     position: absolute;
-    top:50vh;
-    
+    width:50%;
+    height:25%;
+    left:25%;
+    top:40vh;
+    background-color: rgba(255, 137, 83, 1);
+    border-radius: 100px;
 }
 
 .context h1,h2{
     display:flex;
-    color: #525e6e;
+    color: #FFF;
 }
 
 .context h1 {
     font-size: 40px;
     justify-content: center;
+    margin-top:5%;
 }
 
 .context h2 {
     font-size: 20px;
     justify-content: center;
 }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .context {
+    animation: bounce 2s 2;
+  }
+  
 
 .area{
     background: #faecd1;  
