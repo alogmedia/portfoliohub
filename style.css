@@ -1,0 +1,412 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    background-color: #faecd1;
+}
+
+.hidden {
+    display: none;
+}
+
+.leftcorner {
+    position: absolute;
+    width: 20rem;
+    height: 25rem;
+    background-color: #ff7811;
+    border-radius: 0 0 10rem 10rem;
+    opacity: 0.5;
+    transform: rotate(-45deg);
+    left: -15%;
+    top: -35%;
+}
+
+
+.navmenu {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.navmenu ul {
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navmenu ul li {
+    margin: 10px 20px;
+    display: inline-block; /* This is optional since display: flex on the ul already layouts li in a row */
+}
+
+.navmenu ul li a {
+    text-decoration: none;
+    color: #525e6e;
+    font-size: 20px;
+
+}
+
+.navmenu ul li.active {
+    background-color: rgba(255, 137, 83, 1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* This targets <a> tags within <li> elements that have the 'active' class */
+.navmenu ul li.active a {
+    color: #FFF; /* Change the text color to white */
+}
+
+
+
+
+
+/* PORTFOLIO SECTION */
+.portfolio {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh; /* Ensure it has a minimum height */
+    background-color: #faecd1;
+    /* Add more styling as needed */
+    z-index: 1;
+}
+
+/* Adjusted CSS for smooth animation */
+.portfolio-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Ensure it's not visible initially */
+    background: -webkit-linear-gradient(to left, #d45e04, #ff7811);  
+    width: 100%;
+    height:100vh; 
+}
+
+.portfolio-image, .portfolio-text {
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition for both opacity and transform */
+}
+
+.portfolio-image {
+    transform: translateX(-50%); /* Start off-screen to the left */
+}
+
+.portfolio-text {
+    transform: translateX(50%); /* Start off-screen to the right */
+}
+
+/* Ensure visibility and opacity transitions are correctly targeted */
+.portfolio-visible.portfolio-content {
+    opacity: 1; /* Adjusted for clarity */
+    visibility: visible; /* Make sure the container is visible */
+}
+
+/* Adjust transitions to kick in when .portfolio-visible is present */
+.portfolio-visible .portfolio-text {
+    opacity: 1; /* Transition to fully opaque */
+    transform: translateX(-50%); /* Move into final position */
+}
+
+.portfolio-visible .portfolio-image {
+    opacity: 1; /* Transition to fully opaque */
+    transform: translateX(50%); /* Move into final position */
+}
+
+.portfolio-image {
+    width:25%;
+}
+
+
+
+
+
+/* CIRCLE BACKGROUND SECTION */
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1,h2{
+    display:flex;
+    color: #525e6e;
+}
+
+.context h1 {
+    font-size: 40px;
+    justify-content: center;
+}
+
+.context h2 {
+    font-size: 20px;
+    justify-content: center;
+}
+
+.area{
+    background: #faecd1;  
+    background: -webkit-linear-gradient(to left, #d45e04, #ff7811);  
+    width: 100%;
+    height:100vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 137, 83, 0.788);
+    animation: animateup 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animateup {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 100%;
+    }
+
+}
+
+.circlesdown{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circlesdown li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 137, 83, 0.788);
+    animation: animatedown 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circlesdown li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circlesdown li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circlesdown li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circlesdown li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circlesdown li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circlesdown li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circlesdown li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circlesdown li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circlesdown li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circlesdown li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animatedown {
+    0% {
+        transform: translateY(-1000px) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(0) rotate(720deg);
+        opacity: 0;
+        border-radius: 100%;
+    }
+}
+
+.delimiter {
+    background-color: #525e6e;
+    width:100%;
+    height:10px;
+}
